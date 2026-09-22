@@ -70,7 +70,7 @@
 4) Pod logs in Headlamp ansehen -> **Erkenntnis: Container läuft**
 5) Dann das Service via Kommandozeile in Tab 1 (controlplane) deployen:
     ```bash
-    kubectl create service nodeport whoami --node-port=30080 --tcp=80:80`
+    kubectl create service nodeport whoami --node-port=30080 --tcp=80:80
     ```
 5) Via Killercoda ☰ Menü `Traffic / Ports` bei einem der beiden Hosts Port `30080` eingeben und anwählen.
 6) Es öffnet sich der Response des `whoami` Webservers in einem separaten Tab
