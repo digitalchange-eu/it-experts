@@ -73,14 +73,14 @@
     ```
 5) Via Killercoda ☰ Menü `Traffic / Ports` bei einem der beiden Hosts Port `30080` eingeben und anwählen.
 6) Es öffnet sich der Response des `whoami` Webservers in einem separaten Tab
-6) Welche Hosts und IP-Adressen werden bei Browser-Reload angezeigt -> **Erkenntnis: Immer die selbe**
-7) Deployment in Headlamp skalieren 1 -> 3
-8) Erneut auf den `whoami` Webserver Tab im Browser zugreifen
-9) Welche Hosts und IP-Adressen werden bei Browser-Reload angezeigt -> **Erkenntnis: Hosts und IP-Adressen rotieren = Demonstration des Loadbalancers**
-10) Einzelne Pods in Headlamp löschen -> **Erkenntnis: Pods werden sofort ersetzt**
+7) Welche Hosts und IP-Adressen werden bei Browser-Reload angezeigt -> **Erkenntnis: Immer die selbe**
+8) Deployment in Headlamp skalieren 1 -> 3
+9) Erneut auf den `whoami` Webserver Tab im Browser zugreifen
+10) Welche Hosts und IP-Adressen werden bei Browser-Reload angezeigt -> **Erkenntnis: Hosts und IP-Adressen rotieren = Demonstration des Loadbalancers**
+11) Einzelne Pods in Headlamp löschen -> **Erkenntnis: Pods werden sofort ersetzt**
 
 Optional:
 
-11) Via Tab 2 wieder auf `node01` wechseln und `htop` ausführen und nach `/whoami` suchen -> **Erkenntnis: Container sind einfach nur drei Linux-Prozesse**
+12) Via Tab 2 wieder auf `node01` wechseln und `htop` ausführen und nach `/whoami` suchen -> **Erkenntnis: Container sind einfach nur drei Linux-Prozesse**
 
 **Ergebnis: Hochverfügbare Bereitstellung eines selbstgebauten Container-Images**
