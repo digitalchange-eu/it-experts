@@ -63,6 +63,7 @@
     kubectl cordon controlplane
     ```
 2) Danach kann das `whoami` Deployment grafisch erstellt werden:
+
     ![](./images/deployment.png)
 
 3) Ereignisse in Headlamp verfolgen
@@ -81,6 +82,6 @@
 
 Optional:
 
-12) Via Tab 2 wieder auf `node01` wechseln und `htop` ausführen und nach `/whoami` suchen -> **Erkenntnis: Container sind einfach nur drei Linux-Prozesse**
+13) Via Tab 2 wieder auf `node01` wechseln und `htop` ausführen und nach `/whoami` suchen -> **Erkenntnis: Container sind einfach nur drei Linux-Prozesse**
 
 **Ergebnis: Hochverfügbare Bereitstellung eines selbstgebauten Container-Images**
