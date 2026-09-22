@@ -19,7 +19,8 @@
     ```bash
     ssh node01
     ```
-5) [nerdctl](https://github.com/containerd/nerdctl) und [BuildKit](https://github.com/moby/buildkit) installieren:
+    Ergebnis: Tab 2 zeigt nun `root@node01:~$`
+5) In Tab 2 (`node01`) [nerdctl](https://github.com/containerd/nerdctl) und [BuildKit](https://github.com/moby/buildkit) installieren:
     ```bash
     curl -fsSL https://raw.githubusercontent.com/digitalchange-eu/it-experts/main/buildkit.sh | sudo bash
     ```
@@ -37,7 +38,7 @@ Ergebnis: Image `localhost/whoami` ist auf Worker `node01` verfügbar
 ### B. Kubernetes UI (Headlamp) installieren und verwenden
 
 1) Auf die controlplane (Tab 1) wechseln
-2) [Headlamp](https://headlamp.dev/) installieren. Admin token und nodePort wird ausgegeben:
+2) [Headlamp](https://headlamp.dev/) installieren. Admin wird ausgegeben:
     ```bash
     curl -fsSL https://raw.githubusercontent.com/digitalchange-eu/it-experts/main/headlamp.sh | bash
     ```
