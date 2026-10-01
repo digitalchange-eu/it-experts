@@ -58,16 +58,32 @@
 
 ### C. Eigenes Image im Cluster deployen und skalieren
 
-1) Vor dem Deployment muss der Node `controlplane` "abgesperrt" werden, da dort das Image nicht verfügbar ist:
+1) Vor dem Deployment muss der Node `controlplane` "abgesperrt" werden, da dort das Image nicht verfügbar ist. Hierzu auf die controlplane (Tab 1) wechseln und folgendes eingeben:
     ```bash
     kubectl cordon controlplane
     ```
 2) Danach kann das `whoami` Deployment grafisch erstellt werden:
 
+    ![](./images/create_deployment.png)
+    
+    Im Form folgende Werte einfüllen und die Pull Policy auf `Never` setzen:
+    ```
+    whoami
+    ```
+    ```
+    localhost/whoami
+    ```
+    ```
+    80
+    ```
+
     ![](./images/deployment.png)
 
 3) Ereignisse in Headlamp verfolgen
 4) Pod logs in Headlamp ansehen -> **Erkenntnis: Container läuft**
+
+    ![](./images/logs.png)
+
 5) Dann das Service via Kommandozeile in Tab 1 (controlplane) deployen:
     ```bash
     kubectl create service nodeport whoami --node-port=30080 --tcp=80:80
@@ -76,9 +92,16 @@
 6) Es öffnet sich der Response des `whoami` Webservers in einem separaten Tab
 7) Welche Hosts und IP-Adressen werden bei Browser-Reload angezeigt -> **Erkenntnis: Immer die selbe**
 8) Deployment in Headlamp skalieren 1 -> 3
+
+    ![](./images/scale.png)
+
+    ![](./images/scale_window.png)
+
 9) Erneut auf den `whoami` Webserver Tab im Browser zugreifen
 10) Welche Hosts und IP-Adressen werden bei Browser-Reload angezeigt -> **Erkenntnis: Hosts und IP-Adressen rotieren = Demonstration des Loadbalancers**
 11) Einzelne Pods in Headlamp löschen -> **Erkenntnis: Pods werden sofort ersetzt**
+
+    ![](./images/delete.png)
 
 Optional:
 
