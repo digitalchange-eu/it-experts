@@ -29,9 +29,13 @@
     ```bash
     git clone https://github.com/traefik/whoami.git && cd whoami
     ```
-7) Container lokal bauen und in den lokalen Kubernetes container namespace (k8s.io) pushen:
+7) Image lokal bauen und in den lokalen Kubernetes container namespace (k8s.io) pushen:
     ```bash
     nerdctl -n k8s.io build -t localhost/whoami .
+    ```
+8) Lokale images betrachten:
+    ```bash
+    nerdctl -n k8s.io images
     ```
 
 **Ergebnis: Image `localhost/whoami` ist auf Worker `node01` verfügbar**
